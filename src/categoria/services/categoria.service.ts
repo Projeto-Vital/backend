@@ -46,7 +46,7 @@ export class CategoriaService{
         if(!buscaCategoria || !categoria.id)
             throw new HttpException('Categoria não encontrada!', HttpStatus.NOT_FOUND)
 
-        return this.categoriaRepository.save(buscaCategoria)
+        return this.categoriaRepository.save(categoria)
    }
 
    async delete(id:number): Promise<DeleteResult>{
