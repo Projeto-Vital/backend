@@ -41,7 +41,7 @@ export class ProdutoController{
     }
 
     @Delete("/:id")
-    @HttpCode(HttpStatus.OK)
+    @HttpCode(HttpStatus.NO_CONTENT)
     delete(@Param("id") id: number){
         return this.produtoService.delete(id)
     }
