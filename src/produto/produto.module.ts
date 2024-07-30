@@ -4,11 +4,12 @@ import { Produto } from "./entities/produto.entity";
 import { CategoriaModule } from "../categoria/categoria.module";
 import { ProdutoService } from "./services/produto.services";
 import { CategoriaService } from "../categoria/services/categoria.service";
+import { ProdutoController } from "./controllers/produto.controller";
 
 @Module({
     imports: [TypeOrmModule.forFeature([Produto]), CategoriaModule],
     providers: [ProdutoService, CategoriaService],
-    controllers: [],
+    controllers: [ProdutoController],
     exports:[TypeOrmModule],
 })
 export class ProdutoModule {}
