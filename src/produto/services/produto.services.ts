@@ -17,6 +17,13 @@ export class ProdutoService {
         categoria: true,
         usuario: true
       },
+      select: {
+        usuario:{
+          nome:true,
+          usuario:true,
+          foto: true
+      }
+    }
     });
   }
 
@@ -29,6 +36,11 @@ export class ProdutoService {
         categoria: true,
         usuario: true
       },
+      select: {
+        nome:true,
+        usuario:true,
+        foto: true
+      }
     });
     if (!buscaProduto)
       throw new HttpException('Produto não encontrado!', HttpStatus.NOT_FOUND);
@@ -44,6 +56,13 @@ export class ProdutoService {
         categoria: true,
         usuario: true
       },
+      select: {
+        usuario: {
+          nome:true,
+          usuario:true,
+          foto: true
+        }
+      }
     });
     return buscaNome;
   }

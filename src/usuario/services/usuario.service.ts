@@ -25,6 +25,13 @@ export class UsuarioService {
         return await this.usuarioReposity.find({
             relations:{
                 produto: true
+            },
+            select: {
+                usuario: {
+                  nome:true,
+                  usuario:true,
+                  foto: true
+                }
             }
         });
     }
@@ -36,7 +43,15 @@ export class UsuarioService {
             },
             relations: {
                 produto: true
-            }
+            },
+            select: {
+                usuario: {
+                  nome:true,
+                  usuario:true,
+                  foto: true
+                }
+              }
+
         });
 
         if(!usuario) 
