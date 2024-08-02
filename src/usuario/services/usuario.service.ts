@@ -53,6 +53,7 @@ export class UsuarioService {
             usuario.senha = await this.bcryp.criptografarSenha(usuario.senha);
             return await this.usuarioReposity.save(usuario);
         }
+        throw new HttpException ("Usuário já cadastrado!", HttpStatus.BAD_REQUEST)
     }
 
     async update(usuario:Usuario): Promise<Usuario> {

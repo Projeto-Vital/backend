@@ -15,7 +15,6 @@ export class ProdutoController{
         return this.produtoService.findAll();
     }
 
-    @UseGuards(JwtAuthGuard)
     @Get("/:id")
     @HttpCode(HttpStatus.OK)
     findById(@Param("id", ParseIntPipe)id: number): Promise<Produto>{

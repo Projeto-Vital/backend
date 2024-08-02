@@ -19,7 +19,7 @@ export class AuthService{
         if(!buscaUsuario)
             throw new HttpException('Usuário não encontrado!', HttpStatus.NOT_FOUND)
 
-        const matchPassword = await this.bcrypt.compararSenha(buscaUsuario.senha, password)
+        const matchPassword = await this.bcrypt.compararSenha(password, buscaUsuario.senha)
 
         if(buscaUsuario && matchPassword){
             const { senha, ...resposta } = buscaUsuario 
