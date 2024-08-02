@@ -22,8 +22,8 @@ export class ProdutoService {
           nome:true,
           usuario:true,
           foto: true
+        }
       }
-    }
     });
   }
 
@@ -37,14 +37,18 @@ export class ProdutoService {
         usuario: true
       },
       select: {
-        nome:true,
-        usuario:true,
-        foto: true
+        usuario:{
+          nome:true,
+          usuario:true,
+          foto: true
+        }
       }
     });
+
     if (!buscaProduto)
       throw new HttpException('Produto não encontrado!', HttpStatus.NOT_FOUND);
     return buscaProduto;
+
   }
 
   async findByNome(nome: string): Promise<Produto[]> {
@@ -66,7 +70,7 @@ export class ProdutoService {
     });
     return buscaNome;
   }
-  // REVER COM O PROFESSOR
+
   async create(produto: Produto): Promise<Produto> {
     if (produto.categoria) {
       await this.categoriaService.findById(produto.categoria.id);

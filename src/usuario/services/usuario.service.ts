@@ -27,12 +27,10 @@ export class UsuarioService {
                 produto: true
             },
             select: {
-                usuario: {
                   nome:true,
                   usuario:true,
                   foto: true
                 }
-            }
         });
     }
 
@@ -45,13 +43,10 @@ export class UsuarioService {
                 produto: true
             },
             select: {
-                usuario: {
                   nome:true,
                   usuario:true,
                   foto: true
-                }
               }
-
         });
 
         if(!usuario) 
