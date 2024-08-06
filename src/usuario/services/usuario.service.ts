@@ -43,6 +43,7 @@ export class UsuarioService {
                 produto: true
             },
             select: {
+                  id: true,
                   nome:true,
                   usuario:true,
                   foto: true
