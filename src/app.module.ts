@@ -7,6 +7,7 @@ import { Usuario } from './usuario/entities/usuario.entity';
 import { ProdutoModule } from './produto/produto.module';
 import { AuthModule } from './auth/auth.module';
 import { UsuarioModule } from './usuario/usuario.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -19,14 +20,14 @@ import { UsuarioModule } from './usuario/usuario.module';
       database: 'db_projeto_integrador',
       entities: [Categoria, Produto, Usuario],
       synchronize: true,
-      logging: true 
+      // logging: true 
     }),
     CategoriaModule,
     ProdutoModule,
     AuthModule,
     UsuarioModule
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule {}
