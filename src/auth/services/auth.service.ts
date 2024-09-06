@@ -41,6 +41,7 @@ export class AuthService{
             nome: buscaUsuario.nome,
             usuario: usuarioLogin.usuario,
             foto: buscaUsuario.foto,
+            tipo: buscaUsuario.tipo,
             token: `Bearer ${this.jwtService.sign(payload)}`,
         }
 
