@@ -29,7 +29,8 @@ export class UsuarioService {
             select: {
                   nome:true,
                   usuario:true,
-                  foto: true
+                  foto: true,
+                  tipo:true
                 }
         });
     }
@@ -46,7 +47,8 @@ export class UsuarioService {
                   id: true,
                   nome:true,
                   usuario:true,
-                  foto: true
+                  foto: true,
+                  tipo:true
               }
         });
 

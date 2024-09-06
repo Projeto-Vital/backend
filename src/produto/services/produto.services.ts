@@ -21,7 +21,8 @@ export class ProdutoService {
         usuario:{
           nome:true,
           usuario:true,
-          foto: true
+          foto: true,
+          tipo:true
         }
       }
     });
@@ -40,7 +41,8 @@ export class ProdutoService {
         usuario:{
           nome:true,
           usuario:true,
-          foto: true
+          foto: true,
+          tipo:true
         }
       }
     });
@@ -64,7 +66,8 @@ export class ProdutoService {
         usuario: {
           nome:true,
           usuario:true,
-          foto: true
+          foto: true,
+          tipo:true
         }
       }
     });
