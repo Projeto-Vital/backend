@@ -19,6 +19,7 @@ export class ProdutoService {
       },
       select: {
         usuario:{
+          id:true,
           nome:true,
           usuario:true,
           foto: true,
@@ -39,6 +40,7 @@ export class ProdutoService {
       },
       select: {
         usuario:{
+          id:true,
           nome:true,
           usuario:true,
           foto: true,
@@ -64,6 +66,7 @@ export class ProdutoService {
       },
       select: {
         usuario: {
+          id:true,
           nome:true,
           usuario:true,
           foto: true,
